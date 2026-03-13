@@ -1,0 +1,66 @@
+table dim_time
+	lineageTag: 193ba789-708d-4a29-b90e-2fbc83c5c65c
+	sourceLineageTag: [dbo].[dim_time]
+
+	column time_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fe8effbf-4aa5-42df-a7cf-48a9bc6c116a
+		sourceLineageTag: time_id
+		summarizeBy: none
+		sourceColumn: time_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column hour_of_day
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: cc2cd7fb-6eca-4279-9466-a2af6ff092b5
+		sourceLineageTag: hour_of_day
+		summarizeBy: none
+		sourceColumn: hour_of_day
+
+		annotation SummarizationSetBy = Automatic
+
+	column minute_of_hour
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e20b4b65-f51f-49df-8cb8-ee72445c1a6b
+		sourceLineageTag: minute_of_hour
+		summarizeBy: none
+		sourceColumn: minute_of_hour
+
+		annotation SummarizationSetBy = Automatic
+
+	column second_of_minute
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 95cea634-dfbb-4316-b64a-e7390d3dc9ad
+		sourceLineageTag: second_of_minute
+		summarizeBy: none
+		sourceColumn: second_of_minute
+
+		annotation SummarizationSetBy = Automatic
+
+	column time_period
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 23b8e32c-158f-43bc-9056-5d2f9867017c
+		sourceLineageTag: time_period
+		summarizeBy: none
+		sourceColumn: time_period
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_time = entity
+		mode: directLake
+		source
+			entityName: dim_time
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
