@@ -25,6 +25,17 @@
 
 # CELL ********************
 
+#test
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
 # Path to the wind_power table in the Bronze Lakehouse
 bronze_table_path = "abfss://WindPowerAnalytics_ManalSoulane@onelake.dfs.fabric.microsoft.com/LH_Wind_Power_Bronze.Lakehouse/Tables/dbo/wind_power"
 # Load the wind_power table into a DataFrame
